@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 
+# piccola nota: si lo so che le parentesi sono apparentemente inutili, ma mi aiutano a collassare blocchi e a comprendere meglio cosa scrivo
+
 LANGUAGE_STRUCTURE = { # QUI SONO DEFINITI I LINGUAGGI SUPPORTATI E LO SCHEMA DI CARTELLE DA CREARE
     "C": ["src", "include"],
     "Java": [],
@@ -11,11 +13,22 @@ LANGUAGE_STRUCTURE = { # QUI SONO DEFINITI I LINGUAGGI SUPPORTATI E LO SCHEMA DI
 PROJECTS = ["Calculator","Converter","WallpapeRand","Hangman","GuessNumber2","Bonus"] # QUI DEFINITE LE CARTELLE DEI PROGETTINI
 
 #================================================================= MAIN ==============================================
+def print_banner():
+#{
+    """Stampa un banner da file bannerGen.txt se presente"""
+    banner_path = Path(__file__).parent / "bannerGen.txt"
+    if banner_path.exists():
+        with banner_path.open("r", encoding="utf-8") as f:
+            print(f.read())
 
+    else:
+        print("Benvenuto nel generatore di progetti NemoProjects!")
+
+#}
 # main, usa generate_projects e riceve l'input
 def main():
 # {
-    print("Benvenuto nel generatore di progetti NemoProjects!")
+    print_banner()
     language = input("Inserisci il linguaggio (C/Java/C#/Python): ").strip()
     generate_projects(language)
 # }
@@ -80,14 +93,11 @@ def create_project_folders(base_path, language):
         proj_path.mkdir(exist_ok=True)
 
         if language in LANGUAGE_STRUCTURE:
-        # {
             for folder in LANGUAGE_STRUCTURE[language]:
                 (proj_path / folder).mkdir(exist_ok=True)
-        # }
         else:
-        # {
             print(f"Attenzione: il linguaggio '{language}' non è supportato. Creo solo la cartella del progetto.")
-        # }
+
         
         create_project_readme(proj_path, language)
     # }
