@@ -49,7 +49,7 @@ guarda apps.txt per vedere come aggiungerli, in linea di massima la struttura è
 <NOME_APP> | <COMANDO E/O PERCORSO_ESEGUIBILE>
 ```
 
-## script python Generatore di progetti NemoProjects_<Lang>
+## script python Generatore di progetti NemoProjects_"Lang"
 Quando si seleziona l’opzione 3, viene lanciato lo script Python NemoProjects_template.py, che genera automaticamente strutture di progetti per diversi linguaggi:
 
 - C
@@ -59,7 +59,7 @@ Quando si seleziona l’opzione 3, viene lanciato lo script Python NemoProjects_
 
 Per ogni linguaggio, crea:
 
-- una cartella base NemoProjects_<Lang>
+- una cartella base NemoProjects_"Lang"
 - un readme generico con la lista dei progetti individuali
 - progetti individuali (Calculator, Converter, Hangman, ecc.)
 - sottocartelle specifiche nei progetti individuali (src, include, ecc.)
