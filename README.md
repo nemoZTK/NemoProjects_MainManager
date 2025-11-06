@@ -63,6 +63,6 @@ Per ogni linguaggio, crea:
 - un readme generico con la lista dei progetti individuali
 - progetti individuali (Calculator, Converter, Hangman, ecc.)
 - sottocartelle specifiche nei progetti individuali (src, include, ecc.)
-- un README.md per ogni progetto con istruzioni per la creazione e l’avvio
+- un README.md per ogni progetto con istruzioni per la creazione e l’avvio (comandi dotnet, mvn, link a spring e cose simili per creare i progetti)
 
 
