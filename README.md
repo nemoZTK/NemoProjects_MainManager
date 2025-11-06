@@ -27,7 +27,7 @@ ha un menu principale con le seguenti voci
 
 1. usa lista eseguibili da apps.txt
 2. scansiona una cartella
-3. esegui script di creazione NemoProjects_<Lang>
+3. esegui script di creazione NemoProjects_"Lang"
 0. Esci
 
 ## Scansione directory
